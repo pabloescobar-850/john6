@@ -201,3 +201,58 @@ gcc process1.c -o process1
 //Terminal 2
 gcc process2.c -o process2
 ./process2
+
+# STEP 1: Create a folder
+mkdir fifo_assignment
+cd fifo_assignment
+
+# STEP 2: Create Process 1
+nano process1.c
+
+# Paste PROCESS 1 code, then save:
+# Ctrl + O -> Enter -> Ctrl + X
+
+# STEP 3: Create Process 2
+nano process2.c
+
+# Paste PROCESS 2 code, then save:
+# Ctrl + O -> Enter -> Ctrl + X
+
+# STEP 4: Compile both programs
+gcc process1.c -o process1
+gcc process2.c -o process2
+
+# STEP 5: Open Terminal 1 and run Process 1
+./process1
+
+# Output:
+# Enter sentences (type END to finish):
+
+# STEP 6: Open Terminal 2
+cd fifo_assignment
+
+# Run Process 2
+./process2
+
+# STEP 7: Enter the following sentences in Terminal 1
+Hello world
+Operating system practical
+This is FIFO communication
+END
+
+# STEP 8: Expected output in Terminal 1
+# Result received from Process 2:
+# Number of characters: 57
+# Number of words: 8
+# Number of lines: 3
+
+# STEP 9: Expected output in Terminal 2
+# Analysis completed. Results saved in output.txt
+
+# STEP 10: Verify the result file
+cat output.txt
+
+# Expected output:
+# Number of characters: 57
+# Number of words: 8
+# Number of lines: 3    
